@@ -45,4 +45,4 @@ function randomChoice(html, tag, occ) {
   return html;
 }
 
-console.log(randomChoice(html, 'h1', 2));
+console.log(randomChoice(html, 'li', 2));
