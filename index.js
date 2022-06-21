@@ -7,6 +7,12 @@ let html = `<div> <h1> {{question}} </h1>
 </ul>     
 </div>`;
 
+/**
+ * @param {string} html
+ * @param {string} tag
+ * @param {number} occ
+ * @returns {boolean} return true if there is the tag, false otherwise
+ */
 function isOnTag(html, tag, offset) {
   for (let i = 0; i < tag.length; i++) {
     if (html[offset + i] !== tag[i]) {
@@ -20,7 +26,9 @@ function isOnTag(html, tag, offset) {
  * @param {string} html
  * @param {string} tag
  * @param {number} occ
- * @returns {string} return edited html, if occurence is not found, return original html
+ * @returns {string} return edited `html`, if occurence is not found, return original `html`
+ *
+ * find occurence of a tag in `html` and replace it with <`tag` class="selected">
  */
 function randomChoice(html, tag, occ) {
   let occurenceOfTag = 0;
